@@ -12,3 +12,15 @@
 [Previous Topic](@previous)                                                 [Next Topic](@next)
  */
 
+// single-line comment
+
+/* multi-line comment
+ 
+ */
+
+
+var antiHelloWorld = "We're not here"
+print (antiHelloWorld)
+
+
+ 
