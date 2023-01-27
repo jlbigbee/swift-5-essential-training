@@ -15,17 +15,29 @@
  
  */
 // 1
+var characterName = "biggles"
+var weaponClassification = "atomic bomb"
 
 // 2
+characterName += " tha bomb"
 
 // 3
+var currentMana = 50.65
 
 // 4
+var manaPercentage = currentMana/100
+var manaPercentageString = String(manaPercentage)
 
 // 5
+var debugStats = "\(characterName)\n\nPrefers: \(weaponClassification)\nCurrent Mana: \(manaPercentageString)"
 
 // 6
+var questAccepted = false
+var canQuest = true
 
 // 7
+var questStatus = questAccepted && canQuest
 
 // 8
+debugStats.append(contentsOf: "\nQuesting: \(questStatus)")
+print(debugStats)
