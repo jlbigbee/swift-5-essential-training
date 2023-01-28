@@ -27,3 +27,5 @@ var mostDifficult = levelDifficulty[3]
 levelDifficulty[3] = "Utter Ridiculousness"
 
 
+print(levelDifficulty)
+
