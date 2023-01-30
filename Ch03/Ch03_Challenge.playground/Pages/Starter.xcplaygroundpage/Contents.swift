@@ -15,18 +15,29 @@
  
  */
 // 1
+var shopItemsArray: [String] = ["Apple Juice", "Cigarettes", "Snickers"]
+var shopItemsDictionary: [String:Int] = ["Apple Juice":2, "Cigarettes":10, "Snickers":1]
 
 // 2
+shopItemsArray.contains("Purple Juice")
 
 // 3
+shopItemsArray.insert("Tic Tac", at: 1)
 
 // 4
+var selectedItem = shopItemsArray[1]
 
 // 5
+var selectedItemPrice = shopItemsDictionary[selectedItem]
 
 // 6
+var fullArmor: Set = ["Diamond Helm", "Diamond Armor", "Diamond Greaves", "Diamond Braces"]
+var currentArmor: Set = ["Diamond Helm", "Diamond Braces"]
 
 // 7
+var missingPieces = fullArmor.subtracting(currentArmor)
 
 // 8
-
+var armorPiece = (name: "Diamond Braces", cost:55, canEquip:true)
+armorPiece.canEquip
+armorPiece.cost
