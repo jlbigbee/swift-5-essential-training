@@ -18,6 +18,19 @@
  */
 // Test variables
 
+var currentHp = 95
+var maxHp = 100
 
 // If statement (<, >, <=, >=, !=, ==)
 
+if currentHp >= maxHp {
+    print("You're 100%")
+} else if currentHp < 50 {
+    print("Need some help here...")
+} else {
+    print("Your health is somewhere between 50 and 100")
+}
+
+if currentHp > 90 || currentHp <= maxHp {
+    print("You're doing great honey.")
+}

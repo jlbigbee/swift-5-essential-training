@@ -41,3 +41,5 @@ var missingPieces = fullArmor.subtracting(currentArmor)
 var armorPiece = (name: "Diamond Braces", cost:55, canEquip:true)
 armorPiece.canEquip
 armorPiece.cost
+
+print(shopItemsDictionary)
