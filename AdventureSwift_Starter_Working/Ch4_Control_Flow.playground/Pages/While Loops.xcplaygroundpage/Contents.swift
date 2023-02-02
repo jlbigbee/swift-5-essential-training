@@ -13,7 +13,18 @@
  [Previous Topic](@previous)                                                 [Next Topic](@next)
 
  */
+var playerHealth = 5
+
+
 // While loop
+while playerHealth > 0 {
+    playerHealth -= 1
+    print("Still alive!")
+}
 
 // Repeat-while loop
 
+repeat {
+    playerHealth -= 1
+    print("HP at \(playerHealth)")
+} while playerHealth > 0
