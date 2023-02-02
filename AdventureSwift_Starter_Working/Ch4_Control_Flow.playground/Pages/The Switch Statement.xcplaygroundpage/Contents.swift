@@ -15,11 +15,29 @@
  */
 // Test variables
 let initial = "H"
-let hp = 26
-let mp = 24
+let hp = 15
+let mp = 21
 
 // Simple switch
 
+switch initial {
+case "H":
+    print("Is it Harold?")
+case "A":
+    print("Most likely Ashley..")
+default:
+    print("Hell if i know.")
+}
 
 // Complex variations
 
+switch (hp,mp) {
+case (15,20):
+    print("Attaboy")
+case (1...16,20..<25):
+    print("Way to Go!")
+case (let localhp, let localmp) where localhp + localmp > 20 :
+    print(localhp, localmp)
+default:
+    print ("i got nothing")
+}
