@@ -18,7 +18,46 @@ let weapons = ["Longsword": 150, "Dagger": 25, "Mace": 75]
 
 // Strings and arrays
 
+for stringCharacter in playerGreeting {
+    print(stringCharacter)
+}
+
+for armor in armorTypes {
+    print(armor)
+}
+
 // Dictionary key-value pairs
+
+for weaponKey in weapons.keys {
+    print(weaponKey)
+}
+
+for weaponValue in weapons.values {
+    print(weaponValue)
+}
+
+for (weapon, damage) in weapons {
+    print("\(weapon): \(damage)")
+}
 
 // Using ranges
 
+for indexNumber in 1...10 {
+    print(indexNumber)
+}
+
+for armor in armorTypes[0...] {
+    print(armor)
+}
+
+for indexNumber in 1..<10 {
+    print(indexNumber)
+}
+
+for armor in armorTypes[..<2] {
+    print(armor)
+}
+
+for armor in armorTypes[..<armorTypes.count] {
+    print(armor)
+}
