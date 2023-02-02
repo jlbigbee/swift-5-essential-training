@@ -16,8 +16,12 @@
  
  */
 // 1
+let leftHandedWeapon : String? = "Mace of Gods"
+let rightHandedWeapon : String? = "Shield of Many"
 
 // 2
+
+
 
 // 3
 
