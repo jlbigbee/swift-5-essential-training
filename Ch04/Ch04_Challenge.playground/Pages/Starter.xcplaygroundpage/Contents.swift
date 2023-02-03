@@ -21,12 +21,34 @@ let rightHandedWeapon : String? = "Shield of Many"
 
 // 2
 
-
+if let leftWeapon = leftHandedWeapon, let rightWeapon = rightHandedWeapon {
+    print("Looks like your \(leftWeapon) and \(rightWeapon) are an even match for me!")
+} else {
+    "I didnt bring enough hardware for this..."
+}
 
 // 3
+var playerExpt = ["Harrison":233, "Steven":489, "Bob the Noob":0]
 
 // 4
+for (name,exp) in playerExpt {
+    
+    // 5
+    guard exp > 0 else {
+        print("\(name), you need some serious help...")
+        continue
+    }
+    // 6
+    switch exp {
+    case 32:
+        print("Looking good!")
+    case 201...500:
+        print("Getting better every day...")
+    case (let localExp) where localExp > 500:
+        print("Time to level up!")
+    default:
+        print("Corrupted data found...")
+    }
+}
 
-// 5
 
-// 6
