@@ -15,3 +15,11 @@
  */
 // Basic function
 
+func findNearestAlly(level:Int) -> String {
+    print("Searching for ally above level \(level)")
+    return "Argus"
+}
+
+var ally = findNearestAlly(level: 5)
+
+
