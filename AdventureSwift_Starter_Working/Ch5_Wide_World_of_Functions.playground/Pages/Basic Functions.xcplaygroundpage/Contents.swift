@@ -20,6 +20,11 @@ func findNearestAlly(level:Int) -> String {
     return "Argus"
 }
 
-var ally = findNearestAlly(level: 5)
+func findNearestEnemy(level:Int) -> String {
+    print("Searching for Enemy below level \(level)")
+    return "Fargus"
+}
 
+var ally = findNearestAlly(level: 5)
+var enemy = findNearestEnemy(level: 1)
 
