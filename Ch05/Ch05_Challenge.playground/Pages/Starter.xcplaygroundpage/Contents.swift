@@ -15,16 +15,39 @@
  
  */
 // 1
+typealias Attack = (name: String, damage: Int)
 
 // 2
+func attackEnemy(damage:Int) {
+    print("The foe has been damged for \(damage) health!\n")
+}
 
 // 3
+func attackEnemy(attack: Attack) -> String {
+    return "You attacked with \(attack.name)\nEnemy hit for \(attack.damage) damage!\n"
+}
 
 // 4
+attackEnemy(damage: 20)
+attackEnemy(attack:("Sun Fall", 50))
+
+var message = attackEnemy(attack: ("Power Slam", 55))
+print(message)
 
 // 5
+typealias AttackClosure = ([Attack]) -> Void
+let playerActions = [("Mist Bomb", 45), ("Ranger's Eye", 15), ("Fists of Fury", 5)]
 
 // 6
+func fetchPlayerAttacks(closure:AttackClosure) {
+    closure(playerActions)
+}
+
 
 // 7
 
+fetchPlayerAttacks { (attackOptions) in
+    for (name, damage) in attackOptions {
+        print("\(name) will hit for \(damage) if cast...")
+    }
+}
