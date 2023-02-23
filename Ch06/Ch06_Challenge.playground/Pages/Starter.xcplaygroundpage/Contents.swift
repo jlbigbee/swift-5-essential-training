@@ -16,18 +16,49 @@
  
  */
 // 1
-
-// 2
+class Item {
+    var name: String
+    var price: Int
+    
+    // 4
+    var secret: BonusEffect?
+    
+    // 2
+    init(name: String, price: Int) {
+        self.name = name
+        self.price = price
+    }
+}
 
 // 3
-
-// 4
+struct BonusEffect {
+    var bonus: Int
+}
 
 // 5
+class Inventory{
+    var storedItems: [Item]
+    
+    // 6
+    init(items:[Item]) {
+        self.storedItems = items
+    }
+}
 
-// 6
+
 
 // 7
+var partyWideEffect = BonusEffect(bonus: 15)
+var potion = Item(name: "Healing Potion", price: 35)
+var antidote = Item(name: "Antidote", price: 15)
+
+potion.secret = partyWideEffect
 
 // 8
+var inventory = Inventory(items:[potion, antidote])
+if let itemPower = inventory.storedItems[0].secret?.bonus {
+    print ("Healing potion has a bonus effect of \(itemPower)")
+} else {
+    print("The item queried has no secret effect")
+}
 
