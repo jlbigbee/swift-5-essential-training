@@ -23,10 +23,14 @@ protocol Collectable {
     func collect() -> Bool
 }
 
+protocol Usable {
+    func use()
+}
+
+
 // Protocol adoption
-class Item: Collectable {
+class Item: Collectable, Usable {
     var name: String
-    
     var price: Int
     
     required init(withName: String, startingPrice: Int) {
@@ -39,5 +43,12 @@ class Item: Collectable {
         return true
     }
     
+    func use() {
+        print("Item used!")
+    }
     
 }
+
+let potion = Item(withName: "High Potion", startingPrice: 35)
+potion.collect()
+potion.use()
